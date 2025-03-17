@@ -3,6 +3,7 @@ namespace IKEA.PL
     public class Program
     {
         //Entry Point
+        //1-IKEA Project Architicture (3 Tiers)
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
