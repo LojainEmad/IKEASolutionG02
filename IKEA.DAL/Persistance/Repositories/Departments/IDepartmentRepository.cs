@@ -10,7 +10,7 @@ namespace IKEA.DAL.Persistance.Repositories.Departments
     //GetAll  GetById Add Update Delete
     public interface IDepartmentRepository
     {
-        IEnumerable<Department> GetAll();
+        IEnumerable<Department> GetAll(bool WithNoTracking = true );
         Department? GetById(int id);
          int Add(Department department);
          int Update(Department department);
