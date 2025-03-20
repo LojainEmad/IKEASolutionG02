@@ -1,15 +1,38 @@
+using IKEA.DAL.Persistance.Data;
+using IKEA.DAL.Persistance.Repositories.Departments;
+using Microsoft.EntityFrameworkCore;
+
 namespace IKEA.PL
 {
     public class Program
     {
         //Entry Point
+        //1-IKEA Project Architicture (3 Tiers)
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             #region Configure Services 
+
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+            
+          builder.Services.AddScoped<IDepartmentRepository , DepartmentRepository>();
+            
+            //builder.Services.AddScoped<ApplicationDbContext>();
+            //builder.Services.AddScoped<DbContextOptions<ApplicationDbContext>>((service) =>
+            //{
+            //    var optionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            //    optionBuilder.UseSqlServer("Server=.; Database=IKEAS_G02;trusted_Connection = true ; TrustServerCertificate = true");
+            //    var options = optionBuilder.Options;
+
+            //    return options;
+            //} );
             #endregion
 
 
