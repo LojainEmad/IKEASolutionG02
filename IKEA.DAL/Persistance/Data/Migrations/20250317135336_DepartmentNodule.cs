@@ -17,8 +17,8 @@ namespace IKEA.DAL.Persistance.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "10, 10"),
-                    Name = table.Column<string>(type: "varchar(20", nullable: false),
-                    Code = table.Column<string>(type: "varchar(20", nullable: false),
+                    Name = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Code = table.Column<string>(type: "varchar(20)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreationDate = table.Column<DateOnly>(type: "date", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),

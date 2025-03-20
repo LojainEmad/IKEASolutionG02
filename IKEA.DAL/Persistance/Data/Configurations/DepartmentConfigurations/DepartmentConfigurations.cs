@@ -14,8 +14,8 @@ namespace IKEA.DAL.Persistance.Data.Configurations.DepartmentConfigurations
         public void Configure(EntityTypeBuilder<Department> builder)
         {
             builder.Property(D => D.Id).UseIdentityColumn(10, 10);
-            builder.Property(D => D.Name).HasColumnType("varchar(20").IsRequired();
-            builder.Property(D => D.Code).HasColumnType("varchar(20").IsRequired();
+            builder.Property(D => D.Name).HasColumnType("varchar(20)").IsRequired();
+            builder.Property(D => D.Code).HasColumnType("varchar(20)").IsRequired();
 
             //Development Usage
             builder.Property(D => D.CreatedOn).HasDefaultValueSql("GetDate()");

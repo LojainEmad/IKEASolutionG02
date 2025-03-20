@@ -11,7 +11,7 @@ namespace IKEA.DAL.Models
 
         public int Id { get; set; }
 
-        public bool IsDeleted { get; set; } //Soft Delete
+        public bool IsDeleted { get; set; } 
         public int CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
 

@@ -24,15 +24,6 @@ namespace IKEA.PL
             
           builder.Services.AddScoped<IDepartmentRepository , DepartmentRepository>();
             
-            //builder.Services.AddScoped<ApplicationDbContext>();
-            //builder.Services.AddScoped<DbContextOptions<ApplicationDbContext>>((service) =>
-            //{
-            //    var optionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            //    optionBuilder.UseSqlServer("Server=.; Database=IKEAS_G02;trusted_Connection = true ; TrustServerCertificate = true");
-            //    var options = optionBuilder.Options;
-
-            //    return options;
-            //} );
             #endregion
 
 
