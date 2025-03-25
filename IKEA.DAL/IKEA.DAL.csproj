@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Persistance\Data\Data Seeds\" />
-    <Folder Include="Persistance\Data\Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
